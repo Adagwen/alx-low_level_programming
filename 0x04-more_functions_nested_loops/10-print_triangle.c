@@ -1,31 +1,33 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
-* print_triangle - prints a triangle of a given size to the standard output,
-* @size: the size of the triangle to print
-*
-* Return: void
-*
-* Description: The function uses the _putchar() function to print characters.
-*/
+ * print_triangle - print a triangle
+ * code by Prince Solomon
+ * @size: size of the triangle
+ * Return: void
+ */
+
 void print_triangle(int size)
 {
-	int i, j;
+	int row, hashes, spaces;
 
-	for (i = 1; i <= size; i++)
+	if (size <= 0)
 	{
-		for (j = 1; j <= size; j++)
+		_putchar('\n');
+	}
+	else
+	{
+		for (row = 1; row <= size; row++)
 		{
-			if (j <= i)
-			{
-				_putchar('#');
-			}
-			else
+			for (spaces = size - row; spaces >= 1; spaces--)
 			{
 				_putchar(' ');
 			}
-
+			for (hashes = 1; hashes <= row; hashes++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
