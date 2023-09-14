@@ -1,47 +1,32 @@
 #include <stdio.h>
+#include "main.h"
+
 /**
-* main - prints the numbers from 1 to 100,
-* replacing multiples of 3 with "Fizz",
-* multiples of 5 with "Buzz", and multiples of both with "FizzBuzz"
-*
-* Return: Always 0.
-*
-* Description: The function uses a for loop to iterate from 1 to 100,
-*/
+ * main - Enrty
+ *
+ * Description: prints the numbers 1 - 100 w/
+ * Fizz for multiples of 3, Bizz for multiple of 5,
+ * and FizzBizz for multiple of both
+ *
+ * Return: always 0
+ */
 int main(void)
 {
-int i;
+	int i;
 
-for (i = 1; i <= 100; i++)
-{
-	if (i % 5 == 0 && i % 3 == 0)
+	for (i = 0; i <= 100; i++)
 	{
-	printf("FizzBuzz");
-	printf(" ");
+		if (i % 15 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Bizz");
+		else
+			printf("%i", i);
+		if (i < 100)
+			printf(" ");
 	}
-	else if (i % 3 == 0)
-	{
-		printf("Fizz");
-		printf(" ");
-	}
-	else if (i % 5 == 0)
-	{
-		printf("Buzz");
-		printf(" ");
-	}
-	else
-	{
-		printf("%d", i);
-		printf(" ");
-	}
-	if (i != 100)
-	{
-		printf(" ");
-	}
-	else
-	{
-		printf("\n");
-	}
-}
-return (0);
+	printf("\n");
+	return (0);
 }
