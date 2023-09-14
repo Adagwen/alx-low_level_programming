@@ -1,28 +1,24 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
-* print_integer - Prints an integer to the standard output
-*
-* @n: The integer to print
-*
-* This function takes an integer @n as input and prints it to the standard
-* output using the printf function. The integer is printed as a decimal
-* number with no leading zeros or sign.
-*
-* Return: None
-*/
+ * print_number - prints an integer
+ * @n: .input integer parameter
+ *
+ * code by prince solomon
+ */
+
 void print_number(int n)
 {
-	int num = n;
+	unsigned int i = n;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		num = -num;
+		_putchar(45);
+		i = -1;
 	}
-	if (n / 10 > 0)
+	if (i / 10)
 	{
-		print_number(num / 10);
+		print_number(i / 10);
 	}
-	_putchar((num % 10) + 48);
+	_putchar(i % 10 + '0');
 }
