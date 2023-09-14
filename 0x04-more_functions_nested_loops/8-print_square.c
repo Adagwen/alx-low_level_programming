@@ -1,26 +1,27 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
-* print_square - prints a square of a given size to the standard output,
-*                followed by a new line
-*
-* @size: the size of the square to print
-*
-* Return: void
-*
-* Description: The function uses the _putchar() to print characters.
-*/
+ * print_square - prints a square of size size
+ * @size: size of the shape
+ * Prince Solomon
+ * Return: void
+ */
+
+
 void print_square(int size)
 {
-	int rows;
-	int cols;
+	int i, j;
 
-	for (rows = 1; rows <= size; rows++)
+	if (size <= 0)
+		_putchar('\n');
+
+	for (i = 0; i < size; i++)
 	{
-		for (cols = 1; cols <= size; cols++)
+		for (j = 0; j < (size); j++)
 		{
-			_putchar('#');
+		_putchar('#');
 		}
 		_putchar('\n');
 	}
+
 }
