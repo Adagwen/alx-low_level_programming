@@ -6,13 +6,13 @@
  * @str: The string to be printed.
  *
  * Description:
- *  This function takes a string as input and prints it to the standard output.
+ * This function takes a string as input and prints it to the standard output.
  *
  * Return: void
  */
-void _puts(char *str)
+void _puts(__attribute__((unused)) char *str)
 {
-    /* Function implementation */
+	/* Function implementation */
 }
 
 /**
